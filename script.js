@@ -400,21 +400,6 @@ function initTimelineTabs() {
    9. PROJECTS FILTER & MODAL SYSTEM
    ========================================================================== */
 const projectsData = {
-  1: {
-    title: 'SaaS Boshqaruv & Dashboard Tizimi',
-    category: 'Web Ilova / SaaS',
-    period: '2023 - 2024',
-    description: 'Korxona va tashkilotlar uchun real-vaqt rejimida savdo, daromad va mijozlar hisobotlarini avtomatik hisoblab chiquvchi to\'liq boshqaruv ekotizimi.',
-    features: [
-      'Interaktiv grafiklar va moliyaviy tahlil panellari (Chart.js / Recharts)',
-      'Foydalanuvchilar rollari va huquqlarini boshqarish (RBAC)',
-      'PDF va Excel formatida hisobotlarni eksport qilish',
-      'Tezkor qidiruv va ma\'lumotlarni filtrlash'
-    ],
-    tech: ['React.js', 'Node.js', 'Express', 'Tailwind CSS', 'PostgreSQL', 'JWT'],
-    demoUrl: '#',
-    githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
-  },
   2: {
     title: 'SMM AI Assistant Platformasi',
     category: 'Web Sayt / AI Xizmat',
@@ -443,36 +428,6 @@ const projectsData = {
     ],
     tech: ['Python', 'Aiogram 3.x', 'PostgreSQL', 'Redis', 'Telegram Web App'],
     demoUrl: '#',
-    githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
-  },
-  4: {
-    title: 'FinTech Mobil Bank Dizayni (UI/UX)',
-    category: 'UI/UX Dizayn & Prototip',
-    period: '2024',
-    description: 'Foydalanuvchi qulayligini birinchi o\'ringa qo\'ygan holda ishlab chiqilgan, estetik jihatdan chiroyli va qulay FinTech mobil ilovasi dizayni.',
-    features: [
-      'Qorong\'i (Dark) va Yorug\' (Light) temalar tizimi',
-      'Figma orqali to\'liq interaktiv prototip',
-      'Keng qamrovli Dizayn Tizimi (Design System & UI Kit)',
-      'Foydalanish qulayligi bo\'yicha UX tadqiqotlar'
-    ],
-    tech: ['Figma', 'Prototyping', 'Design Systems', 'User Research'],
-    demoUrl: '#',
-    githubUrl: 'https://figma.com'
-  },
-  6: {
-    title: 'AI Matn & Kontent Generatori',
-    category: 'Web Ilova & Sun\'iy Intellekt',
-    period: '2024',
-    description: 'Sun\'iy intellekt (OpenAI & Gemini API) orqali maqolalar, marketing matnlari, ijtimoiy tarmoqlar postlari va dastur kodlarini yozib beruvchi aqlli servis.',
-    features: [
-      'Prompt shablonlari va parametrlarni (temperatura, ton) sozlash',
-      'Generatsiya qilingan natijalarni saqlash va nusxalash',
-      'Bir nechta tillarda sifatli matnlar yaratish',
-      'Foydalanuvchi token sarfi monitoringi'
-    ],
-    tech: ['React', 'OpenAI API', 'Gemini API', 'Express', 'Tailwind'],
-    demoUrl: 'https://smm-ai-asissant.vercel.app/',
     githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
   }
 };
