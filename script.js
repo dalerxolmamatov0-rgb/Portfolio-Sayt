@@ -429,6 +429,21 @@ const projectsData = {
     tech: ['Python', 'Aiogram 3.x', 'FFmpeg', 'Telegram API', 'Redis'],
     demoUrl: 'https://t.me/video_installer_bot',
     githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
+  },
+  4: {
+    title: 'Portfolio Notification & Chat Boti',
+    category: 'Telegram Bot & Integratsiya',
+    period: '2024',
+    description: 'Portfolio saytidan yuborilgan har qanday murojaat, savol va buyurtmalarni zudlik bilan Telegram guruhiga jo\'natuvchi, xabarlarni formatlovchi va avtomatlashtiruvchi bot.',
+    features: [
+      'Saytdan guruhga real-vaqt rejimida xabarnoma jo\'natish',
+      'HTML teglari bilan chiroyli formatlangan xabarlar',
+      'Foydalanuvchi ma\'lumotlari va kontaktlarini avtomatik ajratish',
+      '24/7 uzluksiz ishlash va yuqori xavfsizlik'
+    ],
+    tech: ['Telegram Bot API', 'JavaScript', 'REST API', 'JSON Webhook'],
+    demoUrl: 'https://t.me/portfolio_chatt_bot',
+    githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
   }
 };
 
@@ -548,10 +563,11 @@ function initContactForm() {
 
   // Telegram sozlamalari
   const TELEGRAM_CONFIG = {
-    // Guruh IDsi (Prtfolio chat)
     chatId: '-1003994018848',
-    // Bot tokeningiz:
-    botToken: '8812926882:AAFo1oZxnoTVSw-vXj-QSHCW4cerpyw3YHc'
+    botTokens: [
+      '8967160185:AAHPGmgsoPG8zYpNiF1XbaydZc_v5zUyRO4',
+      '8812926882:AAFo1oZxnoTVSw-vXj-QSHCW4cerpyw3YHc'
+    ]
   };
 
   if (!contactForm) return;
@@ -594,40 +610,35 @@ function initContactForm() {
 ⏰ <b>Vaqt:</b> ${new Date().toLocaleString('uz-UZ')}`;
 
     try {
-      if (TELEGRAM_CONFIG.botToken && TELEGRAM_CONFIG.botToken !== 'BOT_TOKEN_BU_YERGA') {
-        let response = await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: TELEGRAM_CONFIG.chatId,
-            text: telegramMessage,
-            parse_mode: 'HTML'
-          })
-        });
+      let sentSuccessfully = false;
+      let lastErrorMessage = '';
 
-        let result = await response.json();
-
-        // Agar guruh supergroup bo'lsa (-100 prefiksi kerak bo'lsa) avtomatik qayta yuborish
-        if (!result.ok && !TELEGRAM_CONFIG.chatId.startsWith('-100')) {
-          const supergroupId = `-100${TELEGRAM_CONFIG.chatId.replace('-', '')}`;
-          const retryResponse = await fetch(`https://api.telegram.org/bot${TELEGRAM_CONFIG.botToken}/sendMessage`, {
+      for (const token of TELEGRAM_CONFIG.botTokens) {
+        if (!token || token.startsWith('BOT_TOKEN')) continue;
+        try {
+          const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              chat_id: supergroupId,
+              chat_id: TELEGRAM_CONFIG.chatId,
               text: telegramMessage,
               parse_mode: 'HTML'
             })
           });
-          const retryResult = await retryResponse.json();
-          if (retryResult.ok) {
-            result = retryResult;
+          const result = await response.json();
+          if (result.ok) {
+            sentSuccessfully = true;
+            break;
+          } else {
+            lastErrorMessage = result.description;
           }
+        } catch (err) {
+          lastErrorMessage = err.message;
         }
+      }
 
-        if (!result.ok) {
-          throw new Error(result.description || "Telegramga xabar yuborishda xatolik yuz berdi");
-        }
+      if (!sentSuccessfully && lastErrorMessage) {
+        throw new Error(lastErrorMessage);
       }
 
       // Muvaffaqiyatli xabar
