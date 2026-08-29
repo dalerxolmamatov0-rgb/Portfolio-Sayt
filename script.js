@@ -400,6 +400,22 @@ function initTimelineTabs() {
    9. PROJECTS FILTER & MODAL SYSTEM
    ========================================================================== */
 const projectsData = {
+  1: {
+    title: 'Personal Portfolio Veb-Sayti',
+    category: 'Web Sayt & Shaxsiy Brend',
+    period: '2024',
+    description: 'Dasturchi va AI Prompt Engineer uchun yaratilgan, yuqori samaradorlik va zamonaviy glassmorphism dizayniga ega shaxsiy portfolio veb-sayti.',
+    features: [
+      'Glassmorphism va neon UI elementlari, Dark & Light mavzular',
+      'HTML5 Canvas zarrachalar animatsiyasi va Typewriter effekti',
+      'Filtrlash tizimiga ega loyihalar vitrinasi va modal darchalari',
+      'Telegram Bot orqali real-vaqt rejimida ishlovchi aloqa formasi',
+      'Vercel orqali avtomatlashtirilgan CI/CD joylashuvi'
+    ],
+    tech: ['HTML5', 'CSS3 Custom Properties', 'JavaScript ES6+', 'Vercel', 'Telegram Bot API'],
+    demoUrl: 'https://portfolio-sayt-psi.vercel.app/',
+    githubUrl: 'https://github.com/dalerxolmamatov0-rgb/Portfolio-Sayt'
+  },
   2: {
     title: 'SMM AI Assistant Platformasi',
     category: 'Web Sayt / AI Xizmat',
