@@ -416,18 +416,18 @@ const projectsData = {
     githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
   },
   2: {
-    title: 'Elektron Tijorat & Onlayn Do\'kon',
-    category: 'E-Commerce Veb Sayt',
-    period: '2023',
-    description: 'Click va Payme orqali milliy to\'lovlarni qabul qiluvchi, buyurtmalarni SMS va Telegram orqali xabardor qiluvchi zamonaviy e-commerce platformasi.',
+    title: 'SMM AI Assistant Platformasi',
+    category: 'Web Sayt / AI Xizmat',
+    period: '2024',
+    description: 'SMM mutaxassislari, marketologlar va bizneslar uchun sun\'iy intellekt (Prompt Engineering) yordamida sifatli postlar, ssenariylar va rejalashtirish imkoniyatini taqdim etuvchi AI platforma.',
     features: [
-      'Mahsulotlar katalogi, qulay filtrlar va jonli qidiruv',
-      'Savat, sevimlilar ro\'yxati va bir bosishda xarid',
-      'Payme va Click to\'lov tizimlari integratsiyasi',
-      'Keng imkoniyatli administrator boshqaruv paneli'
+      'Ijtimoiy tarmoqlar (Instagram, Telegram, LinkedIn) uchun AI post yaratish',
+      'Prompt shablonlari va maxsus ton/temperatura parametrlari',
+      'Tezkor kontent-reja generatsiyasi va saqlash',
+      'Vercel orqali tezkor va optimallashgan deploy'
     ],
-    tech: ['Next.js', 'PostgreSQL', 'Prisma ORM', 'Tailwind CSS', 'Payme API'],
-    demoUrl: '#',
+    tech: ['Next.js', 'React', 'OpenAI / Gemini API', 'Tailwind CSS', 'Vercel'],
+    demoUrl: 'https://smm-ai-asissant.vercel.app/',
     githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
   },
   3: {
@@ -472,7 +472,7 @@ const projectsData = {
       'O\'qituvchilar va talabalar uchun shaxsiy kabinet'
     ],
     tech: ['Vue.js', 'FastAPI', 'MongoDB', 'AWS S3', 'Tailwind CSS'],
-    demoUrl: '#',
+    demoUrl: 'https://smm-ai-asissant.vercel.app/',
     githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
   },
   6: {
@@ -487,7 +487,7 @@ const projectsData = {
       'Foydalanuvchi token sarfi monitoringi'
     ],
     tech: ['React', 'OpenAI API', 'Gemini API', 'Express', 'Tailwind'],
-    demoUrl: '#',
+    demoUrl: 'https://smm-ai-asissant.vercel.app/',
     githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
   }
 };
