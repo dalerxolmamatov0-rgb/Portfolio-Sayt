@@ -427,7 +427,7 @@ const projectsData = {
       'Buyurtmalar statistikasi va mijozlar bazasi'
     ],
     tech: ['Python', 'Aiogram 3.x', 'PostgreSQL', 'Redis', 'Telegram Web App'],
-    demoUrl: '#',
+    demoUrl: 'https://t.me/8812926882',
     githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
   }
 };
