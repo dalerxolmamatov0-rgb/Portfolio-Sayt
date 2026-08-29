@@ -460,21 +460,6 @@ const projectsData = {
     demoUrl: '#',
     githubUrl: 'https://figma.com'
   },
-  5: {
-    title: 'Onlayn Ta\'lim & LMS Platformasi',
-    category: 'Web Sayt & Platforma',
-    period: '2023',
-    description: 'O\'quv markazlari va repetitorlar uchun video darslar, uyga vazifalar, onlayn testlar va reyting tizimini o\'z ichiga olgan ta\'lim platformasi.',
-    features: [
-      'Himoyalangan video darsliklar pleyeri',
-      'Avtomatik baholanuvchi test va viktorinalar',
-      'O\'quvchi kursni tugatganda avtomatik PDF sertifikat generatsiyasi',
-      'O\'qituvchilar va talabalar uchun shaxsiy kabinet'
-    ],
-    tech: ['Vue.js', 'FastAPI', 'MongoDB', 'AWS S3', 'Tailwind CSS'],
-    demoUrl: 'https://smm-ai-asissant.vercel.app/',
-    githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
-  },
   6: {
     title: 'AI Matn & Kontent Generatori',
     category: 'Web Ilova & Sun\'iy Intellekt',
