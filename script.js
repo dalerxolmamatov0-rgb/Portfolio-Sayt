@@ -416,18 +416,18 @@ const projectsData = {
     githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
   },
   3: {
-    title: 'Restoran & Yetkazib Berish Telegram Boti',
-    category: 'Telegram Bot & CRM',
-    period: '2023',
-    description: 'Mijozlarga taomlar ro\'yxatini ko\'rish, geolocation orqali manzilni aniqlash va buyurtma berish imkoniyatini taqdim etuvchi avtomatlashtirilgan Telegram bot.',
+    title: 'Video & Media Installer Telegram Boti',
+    category: 'Telegram Bot & Media',
+    period: '2024',
+    description: 'Instagram reels, YouTube videolari, TikTok va boshqa platformalardan media fayllarni bir zumda yuqori sifatda yuklab beruvchi qulay va tezkor Telegram bot.',
     features: [
-      'Web-App integratsiyasi (interaktiv taomlar menyusi)',
-      'Foydalanuvchi joylashuvini avtomatik aniqlash va yetkazish narxini hisoblash',
-      'Oshxona va kuryerlar uchun alohida guruh xabarnomalari',
-      'Buyurtmalar statistikasi va mijozlar bazasi'
+      'Instagram, YouTube, TikTok va Pinterest havolalarini avtomatik aniqlash',
+      'Yuqori sifatli (HD / Full HD) video va audio formatlarda yuklab olish',
+      'Tezkor yuklash tezligi va optimallashtirilgan server arxitekturasi',
+      'Foydalanuvchilar statistikasi va oson boshqaruv'
     ],
-    tech: ['Python', 'Aiogram 3.x', 'PostgreSQL', 'Redis', 'Telegram Web App'],
-    demoUrl: 'https://t.me/8812926882',
+    tech: ['Python', 'Aiogram 3.x', 'FFmpeg', 'Telegram API', 'Redis'],
+    demoUrl: 'https://t.me/video_installer_bot',
     githubUrl: 'https://github.com/dalerxolmamatov0-rgb'
   }
 };
@@ -551,7 +551,7 @@ function initContactForm() {
     // Guruh IDsi (Prtfolio chat)
     chatId: '-1003994018848',
     // Bot tokeningiz:
-    botToken: '8967160185:AAHPGmgsoPG8zYpNiF1XbaydZc_v5zUyRO4'
+    botToken: '8812926882:AAFo1oZxnoTVSw-vXj-QSHCW4cerpyw3YHc'
   };
 
   if (!contactForm) return;
